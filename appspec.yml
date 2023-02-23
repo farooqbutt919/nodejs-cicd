@@ -3,14 +3,4 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/node/nodejs-cicd
-file_exists_behavior: OVERWRITE
-permissions:
-  - object: /home/ec2-user/node/nodejs-cicd
-    owner: ec2-user
-    group: ec2-user
-    mode: 755
-hooks:
-  AfterInstall:
-    - location: deploy/after_install.sh
-      timeout: 1200
-      runas: ec2-user
+
